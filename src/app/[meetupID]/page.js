@@ -34,5 +34,16 @@ function meetupDetails() {
     <MeetUpPage details={showDetails} />
   );
 }
+export async function generateStaticParams() {
+  return [
+    {
+      meetupID: '1'
+    },
+    {
+      meetupID: '2'
+    }
+  ]
+}
+export const dynamicParams = false;
 
 export default meetupDetails;
